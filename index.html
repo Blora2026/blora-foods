@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blora Foods — Premium Dry Fruits & Nuts</title>
   <meta name="description" content="Blora Foods offers farm-fresh cashews, almonds, walnuts, black raisins and a wide range of premium dry fruits. Hand-picked quality, fair prices, delivered across India." />
+  <!-- =========================================================
+       FAVICON — uncomment one of the lines below and replace
+       the path with your favicon file location.
+
+       Option A: PNG / ICO favicon (most common)
+       <link rel="icon" type="image/png" href="images/favicon.png" />
+
+       Option B: SVG favicon (modern browsers)
+       <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+       Option C: ICO favicon (works on all browsers, all sizes)
+       <link rel="shortcut icon" href="images/favicon.ico" />
+       ========================================================= -->
+
+  <link rel="icon" type="image/png" href="images/favicon.png" />
   <style>
     /* ---------- Reset & base ---------- */
     *, *::before, *::after { box-sizing: border-box; }
@@ -81,9 +96,46 @@
       width: 36px; height: 36px; flex-shrink: 0;
     }
     .logo-text { display: flex; flex-direction: column; line-height: 1; }
-    .logo-text .name { font-size: 1.05rem; font-weight: 800; color: #F8F7F2; letter-spacing: -0.01em; }
+    /* ---- Mantique Regular font (header + footer wordmark) ----
+       To use this font, upload your Mantique Regular font file
+       (e.g. MantiqueRegular.woff2 or .ttf) to the same folder as
+       this HTML file, then uncomment ONE of the @font-face blocks below
+       that matches your file format.
+
+       Option A: WOFF2 (recommended, smallest size)
+       @font-face {
+         font-family: 'Mantique Regular';
+         src: url('MantiqueRegular.woff2') format('woff2');
+         font-weight: normal; font-style: normal;
+       }
+
+       Option B: TTF (works everywhere)
+       @font-face {
+         font-family: 'Mantique Regular';
+         src: url('MantiqueRegular.ttf') format('truetype');
+         font-weight: normal; font-style: normal;
+       }
+
+       Option C: Use a Google Fonts CDN link instead
+       (place a <link> tag inside <head> if your font is on Google Fonts)
+       ============================================================ */
+
+       @font-face {
+        font-family: 'Ratched Signature';
+        src: url('Ratched Signature.ttf') format('truetype');
+        font-weight: normal; font-style: normal;
+      }
+
+    .logo-text .name {
+      font-family: 'Ratched Signature', 'Ratched', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #F8F7F2;
+      letter-spacing: -0.01em;
+    }
     .logo-text .name span { color: #DBCEA5; }
-    .logo-text .tag { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #DBCEA5; margin-top: 2px; }
+    /* .logo-text .tag { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #DBCEA5; margin-top: 2px; } */
+    .logo-text .tag { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #DBCEA5; margin-top: 8px; padding-top: 2px; }
     .nav-links { display: none; align-items: center; gap: 4px; }
     .nav-link {
       position: relative; padding: 8px 16px; font-size: 0.875rem; font-weight: 500;
@@ -965,12 +1017,14 @@
     .float-circle:active { transform: scale(0.96); }
     .float-circle.wa { background: #25D366; }
     .float-circle.call { background: #596D4A; }
+    .float-circle.share { background: #3E4A36; }
     .float-pulse {
       position: absolute; inset: 0; border-radius: 50%; opacity: 0.6;
       animation: bloraPulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
     .float-pulse.wa { background: #25D366; }
     .float-pulse.call { background: #596D4A; }
+    .float-pulse.share { background: #3E4A36; }
     .float-circle > svg, .float-circle > span > svg { position: relative; z-index: 1; }
     .float-fab {
       position: relative; width: 56px; height: 56px; border-radius: 50%;
@@ -1015,7 +1069,7 @@
         <img src="images/logo.png" alt="Company Logo" width="30">
         <span class="logo-text">
           <span class="name">Blora <span>Foods</span></span>
-          <!-- <span class="tag">Dry Fruits &amp; Nuts</span> -->
+          <span class="tag">Dry Fruits &amp; Nuts</span>
         </span>
       </button>
       <nav class="nav-links">
@@ -1146,7 +1200,7 @@
               <div class="combo-visual" id="combo-visual"></div>
               <div class="combo-body">
                 <span class="eyebrow">Blora Festival Combo</span>
-                <h2>All four favourites &mdash; &#8377;475 only</h2>
+                <h2>All four favourites &mdash; &#8377;600 only</h2>
                 <p>100g each of Cashew, Badam (Almond), Walnut and Black Raisins, packed in resealable pouches inside a recycled kraft box. The perfect festival gift and the most economical way to try all four bestsellers.</p>
                 <div class="combo-items">
                   <div class="combo-item"><div class="n">Cashew</div><div class="q">100g</div></div>
@@ -1158,9 +1212,9 @@
                   <div>
                     <div class="combo-price-label">Combo pack</div>
                     <div class="combo-price-row">
-                      <span class="combo-price">&#8377;475</span>
-                      <span class="combo-mrp">&#8377;580</span>
-                      <span class="combo-save">SAVE 18%</span>
+                      <span class="combo-price">&#8377;600</span>
+                      <span class="combo-mrp">&#8377;720</span>
+                      <span class="combo-save">SAVE 17%</span>
                     </div>
                   </div>
                   <button class="btn btn-primary" onclick="buyCombo()">
@@ -1320,9 +1374,9 @@
             <h1>Dry fruits the way they <span class="underline">should taste</span>.</h1>
             <p>Blora Foods began as a small family experiment: could we source the same premium dry fruits we served at our own weddings and festivals, and make them available to everyone in our community at a fair, honest price? Six years later, the answer is yes &mdash; and we're still doing it the same way.</p>
             <div class="hero-stats">
-              <div class="hero-stat"><div class="v">6 yrs</div><div class="l">Family-run</div></div>
+              <div class="hero-stat"><div class="v">3 yrs</div><div class="l">Family-run</div></div>
               <div class="hero-stat"><div class="v">30+</div><div class="l">Sourced varieties</div></div>
-              <div class="hero-stat"><div class="v">5000+</div><div class="l">Happy orders</div></div>
+              <div class="hero-stat"><div class="v">1000+</div><div class="l">Happy orders</div></div>
             </div>
           </div>
           <div class="about-hero-visual" id="about-visual"></div>
@@ -1485,10 +1539,10 @@
                   <div style="flex:1;">
                     <h4>Email us</h4>
                     <div class="contact-card-lines">
-                      <p>hello@blorafoods.in</p>
+                      <p>blorafoods2026@gmail.com</p>
                       <p>Replies within 24 hours</p>
                     </div>
-                    <a class="contact-card-action" href="mailto:hello@blorafoods.in">Send email &#8594;</a>
+                    <a class="contact-card-action" href="mailto:blorafoods2026@gmail.com">Send email &#8594;</a>
                   </div>
                 </div>
               </div>
@@ -1565,13 +1619,13 @@
           <img src="images/logo.png" alt="Company Logo" width="30">
           <span class="logo-text">
             <span class="name">Blora <span>Foods</span></span>
-            <!-- <span class="tag">Dry Fruits &amp; Nuts</span> -->
+            <span class="tag">Dry Fruits &amp; Nuts</span>
           </span>
         </span>
         <p>Farm-fresh, hand-picked dry fruits and nuts delivered to your doorstep. Sourced from trusted growers across India and abroad, packed fresh in our Kancheepuram facility.</p>
         <div class="footer-social">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/blora_foods?srtk=MTZncHQ5cDl5c2sxcw%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.facebook.com/people/Blora-Foods/pfbid02f5f4hXj4PUotmKf9cSUaTs5d4tEt9mo8gh83cbHjFriAThMDbWmxL9fhKeXHFjCbl/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
           <a href="https://wa.me/918248920045" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 4c-6.62 0-12 5.38-12 12 0 2.11.55 4.16 1.6 5.97L4 28l6.18-1.62A11.93 11.93 0 0 0 16.04 28c6.62 0 12-5.38 12-12s-5.38-12-12-12Z"/></svg></a>
         </div>
       </div>
@@ -1656,6 +1710,13 @@
   <!-- ============ FLOATING ACTIONS ============ -->
   <div class="floating">
     <div class="floating-stack" id="float-stack">
+      <!-- Share website icon (above WhatsApp) -->
+      <button class="float-action" onclick="shareWebsite()" aria-label="Share this website" style="background:none;border:none;padding:0;cursor:pointer;">
+        <span class="float-circle share">
+          <span class="float-pulse share"></span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        </span>
+      </button>
       <a class="float-action" href="https://wa.me/918248920045?text=Hi%20Blora%20Foods!%20I'd%20like%20to%20know%20more%20about%20your%20dry%20fruits%20and%20pricing." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
         <span class="float-circle wa">
           <span class="float-pulse wa"></span>
@@ -1783,34 +1844,33 @@
       // If you only have 1 image, just put ["0.jpg"].
       // If you have 3, put ["0.jpg", "1.jpg", "2.jpg"].
       const imageMap = {
-        "cashew":               ["0.jpg", "1.jpg", "2.jpg"],
-        "black-grapes":         ["0.jpg", "1.jpg", "2.jpg"],
-        "badam-almond":         ["0.jpg", "1.jpg", "2.jpg"],
-        "walnut":               ["0.jpg", "1.jpg", "2.jpg"],
-        "blora-combo-4x100":    ["0.jpg", "1.jpg", "2.jpg"],
-        "pistachio":            ["0.jpg", "1.jpg", "2.jpg"],
-        "brazil-nut":           ["0.jpg", "1.jpg", "2.jpg"],
-        "hazelnut":             ["0.jpg", "1.jpg", "2.jpg"],
-        "macadamia":            ["0.jpg", "1.jpg", "2.jpg"],
-        "pecan-nut":            ["0.jpg", "1.jpg", "2.jpg"],
-        "pine-nut":             ["0.jpg", "1.jpg", "2.jpg"],
-        "grape-dry-fruits":     ["0.jpg", "1.jpg", "2.jpg"],
-        "raisins-thompson-golden": ["0.jpg", "1.jpg", "2.jpg"],
-        "black-raisins":        ["0.jpg", "1.jpg", "2.jpg"],
-        "dates":                ["0.jpg", "1.jpg", "2.jpg"],
-        "figs-anjeer":          ["0.jpg", "1.jpg", "2.jpg"],
-        "apricots":             ["0.jpg", "1.jpg", "2.jpg"],
-        "prunes":               ["0.jpg", "1.jpg", "2.jpg"],
-        "dried-cranberries":    ["0.jpg", "1.jpg", "2.jpg"],
-        "dried-blueberries":    ["0.jpg", "1.jpg", "2.jpg"],
-        "dried-mango":          ["0.jpg", "1.jpg", "2.jpg"],
-        "dried-pineapple":      ["0.jpg", "1.jpg", "2.jpg"],
-        "dried-papaya":         ["0.jpg", "1.jpg", "2.jpg"],
-        "dried-kiwi":           ["0.jpg", "1.jpg", "2.jpg"],
-        "pumpkin-seed":         ["0.jpg", "1.jpg", "2.jpg"],
-        "sunflower-seed":       ["0.jpg", "1.jpg", "2.jpg"],
-        "flax-seed":            ["0.jpg", "1.jpg", "2.jpg"],
-        "chia-seed":            ["0.jpg", "1.jpg", "2.jpg"],
+        "cashew":               ["0.jpg"],
+        "badam-almond":         ["0.jpg"],
+        "walnut":               ["0.jpg"],
+        "blora-combo-4x100":    ["0.jpg"],
+        "pistachio":            ["0.jpg"],
+        "brazil-nut":           ["0.jpg"],
+        "hazelnut":             ["0.jpg"],
+        "macadamia":            ["0.jpg"],
+        "pecan-nut":            ["0.jpg"],
+        "pine-nut":             ["0.jpg"],
+        "grape-dry-fruits":     ["0.jpg"],
+        "raisins-thompson-golden": ["0.jpg"],
+        "black-raisins":        ["0.jpg"],
+        "dates":                ["0.jpg"],
+        "figs-anjeer":          ["0.jpg"],
+        "apricots":             ["0.jpg"],
+        "prunes":               ["0.jpg"],
+        "dried-cranberries":    ["0.jpg"],
+        "dried-blueberries":    ["0.jpg"],
+        "dried-mango":          ["0.jpg"],
+        "dried-pineapple":      ["0.jpg"],
+        "dried-papaya":         ["0.jpg"],
+        "dried-kiwi":           ["0.jpg"],
+        "pumpkin-seed":         ["0.jpg"],
+        "sunflower-seed":       ["0.jpg"],
+        "flax-seed":            ["0.jpg"],
+        "chia-seed":            ["0.jpg"],
       };
 
       // Look up this product's filenames; fall back to the SVG generator if missing
@@ -1836,7 +1896,7 @@
         defaultGram: 1, badge: "Best seller", tags: ["W240","Whole","Creamy"], origin: "Konkan Coast"
       },
       {
-        id: "black-grapes", name: "Black Grapes (Raisins)", regionalName: "Karutha Drakshai", category: "featured",
+        id: "black-raisins", name: "Black Raisins", regionalName: "Karutha Drakshai", category: "featured",
         blurb: "Sun-dried black raisins — soft, juicy and naturally sweet.",
         images: [{hue:"#5C2E3F",tint:"#F1E2E6"},{hue:"#6E3A4E",tint:"#EFD9DE"},{hue:"#7A4458",tint:"#ECD0D6"}],
         grams: [{label:"100g",price:60},{label:"250g",price:150},{label:"500g",price:290},{label:"1Kg",price:570}],
@@ -1862,33 +1922,32 @@
       id: "blora-combo-4x100", name: "Blora Festival Combo", regionalName: "4 × 100g Premium Pack", category: "combo",
       blurb: "Cashew, Almond, Walnut & Black Raisin — 100g each. Best value.",
       images: [{hue:"#7C8C5C",tint:"#EDF1E1"},{hue:"#596D4A",tint:"#E6ECDB"},{hue:"#3E4A36",tint:"#DDE3D2"}],
-      grams: [{label:"4 × 100g Combo",price:475}], defaultGram: 0, badge: "Best value",
+      grams: [{label:"4 × 100g Combo",price:600}], defaultGram: 0, badge: "Best value",
       tags: ["Best value","Gift box","Festival special"], origin: "Blora Foods"
     };
 
     const OTHERS = [
-      { id:"pistachio", name:"Pistachio", regionalName:"Pista", category:"nut", blurb:"Roasted, lightly salted Iranian pistachios — open shell.", images:[{hue:"#A6B97A",tint:"#EFF3E1"},{hue:"#8FA25F",tint:"#E8EDD6"},{hue:"#C2D08F",tint:"#F3F5E5"}], grams:[{label:"100g",price:110},{label:"250g",price:270},{label:"500g",price:520}], defaultGram:1, tags:["Roasted","Salted","Iranian"], origin:"Iran" },
+      { id:"pistachio", name:"Pistachio", regionalName:"Pista", category:"nut", blurb:"Roasted, lightly salted Iranian pistachios — open shell.", images:[{hue:"#A6B97A",tint:"#EFF3E1"},{hue:"#8FA25F",tint:"#E8EDD6"},{hue:"#C2D08F",tint:"#F3F5E5"}], grams:[{label:"100g",price:110},{label:"250g",price:270},{label:"500g",price:520}], defaultGram:1, tags:["Roasted","Salted","Iranian"], origin:"Iran", outOfStock:true },
       { id:"brazil-nut", name:"Brazil Nut", regionalName:"Brazilnut", category:"nut", blurb:"Large creamy Brazil nuts — selenium-rich superfood.", images:[{hue:"#C9A26D",tint:"#F4E8D2"},{hue:"#B68B53",tint:"#EFE0C1"},{hue:"#D8B682",tint:"#F6EBD5"}], grams:[{label:"100g",price:160},{label:"250g",price:390},{label:"500g",price:750}], defaultGram:1, tags:["Selenium","Creamy","Whole"], origin:"Bolivia", outOfStock:true },
-      { id:"hazelnut", name:"Hazelnut", regionalName:"Hazelnut", category:"nut", blurb:"Round, crunchy hazelnuts — perfect for chocolate pairing.", images:[{hue:"#946D45",tint:"#EFE0CC"},{hue:"#A57E54",tint:"#F2E4D1"},{hue:"#826038",tint:"#ECDCC4"}], grams:[{label:"100g",price:130},{label:"250g",price:310},{label:"500g",price:600}], defaultGram:1, tags:["Skin-on","Round","Roast-ready"], origin:"Turkey" },
+      { id:"hazelnut", name:"Hazelnut", regionalName:"Hazelnut", category:"nut", blurb:"Round, crunchy hazelnuts — perfect for chocolate pairing.", images:[{hue:"#946D45",tint:"#EFE0CC"},{hue:"#A57E54",tint:"#F2E4D1"},{hue:"#826038",tint:"#ECDCC4"}], grams:[{label:"100g",price:130},{label:"250g",price:310},{label:"500g",price:600}], defaultGram:1, tags:["Skin-on","Round","Roast-ready"], origin:"Turkey", outOfStock:true },
       { id:"macadamia", name:"Macadamia Nut", regionalName:"Macadamia", category:"nut", blurb:"Buttery, melt-in-mouth macadamias — the queen of nuts.", images:[{hue:"#E0CFA4",tint:"#F7F1E0"},{hue:"#D2BD88",tint:"#F3ECD3"},{hue:"#C7AF72",tint:"#EFE7C7"}], grams:[{label:"100g",price:240},{label:"250g",price:580},{label:"500g",price:1120}], defaultGram:1, tags:["Dry-roasted","Buttery","Premium"], origin:"Kenya", outOfStock:true },
-      { id:"pecan-nut", name:"Pecan Nut", regionalName:"Pecan", category:"nut", blurb:"Sweet, wrinkly pecan halves — pie-grade quality.", images:[{hue:"#9C7448",tint:"#F0E1C8"},{hue:"#B08755",tint:"#F3E5CC"},{hue:"#876038",tint:"#ECDCBE"}], grams:[{label:"100g",price:175},{label:"250g",price:420},{label:"500g",price:810}], defaultGram:1, tags:["Halves","Sweet","Pie-grade"], origin:"USA" },
-      { id:"pine-nut", name:"Pine Nut", regionalName:"Chilgoza", category:"nut", blurb:"Tiny buttery pine nuts — pesto's best friend.", images:[{hue:"#E6D5A8",tint:"#F8F1DD"},{hue:"#D9C488",tint:"#F5ECCB"},{hue:"#CBB56A",tint:"#F2E7BD"}], grams:[{label:"100g",price:320},{label:"250g",price:760},{label:"500g",price:1480}], defaultGram:1, tags:["Chilgoza","Himalayan","Buttery"], origin:"Himalayas, India" },
-      { id:"raisins-thompson-golden", name:"Raisins / Dry Grapes", regionalName:"Thompson & Golden", category:"dried-fruit", blurb:"Sun-dried Thompson & golden raisins — plump and sweet.", images:[{hue:"#B08C3C",tint:"#F4E8C5"},{hue:"#87603C",tint:"#EFE0C0"},{hue:"#C99F4A",tint:"#F6EBCD"}], grams:[{label:"100g",price:65},{label:"250g",price:160},{label:"500g",price:310},{label:"1Kg",price:600}], defaultGram:1, tags:["Thompson","Golden","Seedless"], origin:"Nashik, MH" },
-      { id:"black-raisins", name:"Black Raisins", regionalName:"Karutha Drakshai", category:"dried-fruit", blurb:"Bold, dark, sun-dried black raisins — iron rich.", images:[{hue:"#4E2A38",tint:"#EED9DD"},{hue:"#633244",tint:"#F0DDDF"},{hue:"#3E2230",tint:"#EBD3D7"}], grams:[{label:"100g",price:60},{label:"250g",price:150},{label:"500g",price:290},{label:"1Kg",price:570}], defaultGram:1, tags:["Sun-dried","Iron-rich","Seedless"], origin:"Theni, TN" },
-      { id:"dates", name:"Dates", regionalName:"Pericham Pandu", category:"dried-fruit", blurb:"Soft, caramel-sweet Medjool-style dates — pitted.", images:[{hue:"#6B3F22",tint:"#EDD9C5"},{hue:"#7E4D2C",tint:"#F0DDC8"},{hue:"#5A341A",tint:"#E9D3BD"}], grams:[{label:"100g",price:75},{label:"250g",price:180},{label:"500g",price:350},{label:"1Kg",price:680}], defaultGram:1, tags:["Pitted","Soft","Caramel-sweet"], origin:"Oman" },
-      { id:"figs-anjeer", name:"Figs / Anjeer", regionalName:"Anjeer", category:"dried-fruit", blurb:"Soft dried figs — chewy, seedy and honey-sweet.", images:[{hue:"#9B6E3F",tint:"#F0E0C5"},{hue:"#AE8050",tint:"#F2E4CB"},{hue:"#875C32",tint:"#ECD8B8"}], grams:[{label:"100g",price:130},{label:"250g",price:310},{label:"500g",price:600}], defaultGram:1, tags:["Afghan","Soft","Seedy"], origin:"Afghanistan" },
-      { id:"apricots", name:"Apricots", regionalName:"Khurmani", category:"dried-fruit", blurb:"Sun-dried apricots — tangy, bright orange.", images:[{hue:"#E08A3C",tint:"#F7E3C5"},{hue:"#CC7830",tint:"#F4DDB6"},{hue:"#ED9A52",tint:"#F8E7CA"}], grams:[{label:"100g",price:110},{label:"250g",price:260},{label:"500g",price:510}], defaultGram:1, tags:["Sun-dried","Tangy","Bright"], origin:"Turkey" },
-      { id:"prunes", name:"Prunes", regionalName:"Dried Plum", category:"dried-fruit", blurb:"Soft, sweet dried plums — digestion's best friend.", images:[{hue:"#5A2A3F",tint:"#EBD2D7"},{hue:"#6E3A4E",tint:"#EFD8DC"},{hue:"#43212F",tint:"#E7CCD1"}], grams:[{label:"100g",price:95},{label:"250g",price:230},{label:"500g",price:450}], defaultGram:1, tags:["Soft","Sweet","Digestion"], origin:"California, USA" },
-      { id:"dried-cranberries", name:"Dried Cranberries", regionalName:"Cranberry", category:"dried-fruit", blurb:"Tart-sweet dried cranberries — salad & baking star.", images:[{hue:"#A21D2C",tint:"#F1D4D2"},{hue:"#8E1A26",tint:"#ECC9C7"},{hue:"#B82B36",tint:"#F2D7D5"}], grams:[{label:"100g",price:145},{label:"250g",price:350},{label:"500g",price:680}], defaultGram:1, tags:["Tart","Sweetened","Red"], origin:"Canada" },
+      { id:"pecan-nut", name:"Pecan Nut", regionalName:"Pecan", category:"nut", blurb:"Sweet, wrinkly pecan halves — pie-grade quality.", images:[{hue:"#9C7448",tint:"#F0E1C8"},{hue:"#B08755",tint:"#F3E5CC"},{hue:"#876038",tint:"#ECDCBE"}], grams:[{label:"100g",price:175},{label:"250g",price:420},{label:"500g",price:810}], defaultGram:1, tags:["Halves","Sweet","Pie-grade"], origin:"USA", outOfStock:true },
+      { id:"pine-nut", name:"Pine Nut", regionalName:"Chilgoza", category:"nut", blurb:"Tiny buttery pine nuts — pesto's best friend.", images:[{hue:"#E6D5A8",tint:"#F8F1DD"},{hue:"#D9C488",tint:"#F5ECCB"},{hue:"#CBB56A",tint:"#F2E7BD"}], grams:[{label:"100g",price:320},{label:"250g",price:760},{label:"500g",price:1480}], defaultGram:1, tags:["Chilgoza","Himalayan","Buttery"], origin:"Himalayas, India", outOfStock:true },
+      { id:"raisins-thompson-golden", name:"Raisins / Dry Grapes", regionalName:"Thompson & Golden", category:"dried-fruit", blurb:"Sun-dried Thompson & golden raisins — plump and sweet.", images:[{hue:"#B08C3C",tint:"#F4E8C5"},{hue:"#87603C",tint:"#EFE0C0"},{hue:"#C99F4A",tint:"#F6EBCD"}], grams:[{label:"100g",price:65},{label:"250g",price:160},{label:"500g",price:310},{label:"1Kg",price:600}], defaultGram:1, tags:["Thompson","Golden","Seedless"], origin:"Nashik, MH", outOfStock:true },
+      { id:"dates", name:"Dates", regionalName:"Pericham Pandu", category:"dried-fruit", blurb:"Soft, caramel-sweet Medjool-style dates — pitted.", images:[{hue:"#6B3F22",tint:"#EDD9C5"},{hue:"#7E4D2C",tint:"#F0DDC8"},{hue:"#5A341A",tint:"#E9D3BD"}], grams:[{label:"100g",price:75},{label:"250g",price:180},{label:"500g",price:350},{label:"1Kg",price:680}], defaultGram:1, tags:["Pitted","Soft","Caramel-sweet"], origin:"Oman", outOfStock:true },
+      { id:"figs-anjeer", name:"Figs / Anjeer", regionalName:"Anjeer", category:"dried-fruit", blurb:"Soft dried figs — chewy, seedy and honey-sweet.", images:[{hue:"#9B6E3F",tint:"#F0E0C5"},{hue:"#AE8050",tint:"#F2E4CB"},{hue:"#875C32",tint:"#ECD8B8"}], grams:[{label:"100g",price:130},{label:"250g",price:310},{label:"500g",price:600}], defaultGram:1, tags:["Afghan","Soft","Seedy"], origin:"Afghanistan", outOfStock:true },
+      { id:"apricots", name:"Apricots", regionalName:"Khurmani", category:"dried-fruit", blurb:"Sun-dried apricots — tangy, bright orange.", images:[{hue:"#E08A3C",tint:"#F7E3C5"},{hue:"#CC7830",tint:"#F4DDB6"},{hue:"#ED9A52",tint:"#F8E7CA"}], grams:[{label:"100g",price:110},{label:"250g",price:260},{label:"500g",price:510}], defaultGram:1, tags:["Sun-dried","Tangy","Bright"], origin:"Turkey", outOfStock:true },
+      { id:"prunes", name:"Prunes", regionalName:"Dried Plum", category:"dried-fruit", blurb:"Soft, sweet dried plums — digestion's best friend.", images:[{hue:"#5A2A3F",tint:"#EBD2D7"},{hue:"#6E3A4E",tint:"#EFD8DC"},{hue:"#43212F",tint:"#E7CCD1"}], grams:[{label:"100g",price:95},{label:"250g",price:230},{label:"500g",price:450}], defaultGram:1, tags:["Soft","Sweet","Digestion"], origin:"California, USA", outOfStock:true },
+      { id:"dried-cranberries", name:"Dried Cranberries", regionalName:"Cranberry", category:"dried-fruit", blurb:"Tart-sweet dried cranberries — salad & baking star.", images:[{hue:"#A21D2C",tint:"#F1D4D2"},{hue:"#8E1A26",tint:"#ECC9C7"},{hue:"#B82B36",tint:"#F2D7D5"}], grams:[{label:"100g",price:145},{label:"250g",price:350},{label:"500g",price:680}], defaultGram:1, tags:["Tart","Sweetened","Red"], origin:"Canada", outOfStock:true },
       { id:"dried-blueberries", name:"Dried Blueberries", regionalName:"Blueberry", category:"dried-fruit", blurb:"Intensely flavoured dried blueberries — antioxidant bomb.", images:[{hue:"#3A3F7A",tint:"#DFE0EC"},{hue:"#2C2F66",tint:"#D6D7E6"},{hue:"#4A4F8E",tint:"#E4E4F0"}], grams:[{label:"100g",price:220},{label:"250g",price:530},{label:"500g",price:1020}], defaultGram:1, tags:["Antioxidant","Sweet-tart","Dark"], origin:"USA", outOfStock:true },
-      { id:"dried-mango", name:"Dried Mango", regionalName:"Mangai Sliced", category:"dried-fruit", blurb:"Sweet, chewy dried mango strips — no added sugar.", images:[{hue:"#F0A41C",tint:"#FBE7BB"},{hue:"#E08E0F",tint:"#F8DFAC"},{hue:"#F7B53A",tint:"#FCEBC5"}], grams:[{label:"100g",price:130},{label:"250g",price:310},{label:"500g",price:600}], defaultGram:1, tags:["No sugar","Alphonso","Chewy"], origin:"Ratnagiri, MH" },
-      { id:"dried-pineapple", name:"Dried Pineapple", regionalName:"Pineapple Ring", category:"dried-fruit", blurb:"Sweet-tart pineapple rings — tropical sunshine.", images:[{hue:"#E8C12C",tint:"#FAECAE"},{hue:"#D6AB1C",tint:"#F6E39C"},{hue:"#F0CD42",tint:"#FBF0BA"}], grams:[{label:"100g",price:145},{label:"250g",price:350},{label:"500g",price:680}], defaultGram:1, tags:["Rings","Tropical","Sweet-tart"], origin:"Thailand" },
-      { id:"dried-papaya", name:"Dried Papaya", regionalName:"Papaya Slices", category:"dried-fruit", blurb:"Soft, vibrant dried papaya strips — tropical and sweet.", images:[{hue:"#E8741C",tint:"#FAD9B5"},{hue:"#D26010",tint:"#F7CFA1"},{hue:"#F0862C",tint:"#FBDDBA"}], grams:[{label:"100g",price:110},{label:"250g",price:270},{label:"500g",price:530}], defaultGram:1, tags:["Strips","Soft","Sweet"], origin:"Sri Lanka" },
-      { id:"dried-kiwi", name:"Dried Kiwi", regionalName:"Kiwi Slices", category:"dried-fruit", blurb:"Tangy green dried kiwi slices — vitamin C powerhouse.", images:[{hue:"#7BAE3C",tint:"#E5EFC9"},{hue:"#6B9628",tint:"#DDE7B7"},{hue:"#8FC04E",tint:"#EBF2D2"}], grams:[{label:"100g",price:165},{label:"250g",price:395},{label:"500g",price:770}], defaultGram:1, tags:["Slices","Tangy","Green"], origin:"New Zealand" },
-      { id:"pumpkin-seed", name:"Pumpkin Seeds", regionalName:"Seemai Kaddal", category:"seed", blurb:"Shelled pumpkin seeds — green, crunchy and protein-rich.", images:[{hue:"#5A7A2E",tint:"#E8EFD5"},{hue:"#4A6B26",tint:"#DDE8C6"},{hue:"#6B8C3F",tint:"#EEF3DC"}], grams:[{label:"100g",price:90},{label:"250g",price:215},{label:"500g",price:420},{label:"1Kg",price:820}], defaultGram:1, tags:["Shelled","Protein-rich","Magnesium"], origin:"India" },
-      { id:"sunflower-seed", name:"Sunflower Seeds", regionalName:"Sooriyakkaani Vithanam", category:"seed", blurb:"Hulled sunflower seeds — nutty, mild and heart-friendly.", images:[{hue:"#8A8478",tint:"#EEEDE7"},{hue:"#6E6A60",tint:"#E4E2DA"},{hue:"#A39B8C",tint:"#F3F1EA"}], grams:[{label:"100g",price:60},{label:"250g",price:145},{label:"500g",price:285},{label:"1Kg",price:550}], defaultGram:1, tags:["Hulled","Heart-friendly","Vitamin E"], origin:"India" },
-      { id:"flax-seed", name:"Flax Seeds", regionalName:"Ali Vithai", category:"seed", blurb:"Golden flax seeds — omega-3 rich superfood for daily wellness.", images:[{hue:"#8B5A2B",tint:"#F0E2CC"},{hue:"#7A4D22",tint:"#EBD9BE"},{hue:"#A06D38",tint:"#F3E6D2"}], grams:[{label:"100g",price:50},{label:"250g",price:120},{label:"500g",price:235},{label:"1Kg",price:450}], defaultGram:1, tags:["Omega-3","Fibre-rich","Golden"], origin:"India" },
-      { id:"chia-seed", name:"Chia Seeds", regionalName:"Chia Vithai", category:"seed", blurb:"Tiny black chia seeds — complete protein and antioxidant powerhouse.", images:[{hue:"#3A3A3A",tint:"#E8E8E8"},{hue:"#2C2C2C",tint:"#DDDDDD"},{hue:"#4A4A4A",tint:"#EFEFEF"}], grams:[{label:"100g",price:110},{label:"250g",price:265},{label:"500g",price:515},{label:"1Kg",price:1000}], defaultGram:1, tags:["Antioxidant","Protein","Superfood"], origin:"South America" },
+      { id:"dried-mango", name:"Dried Mango", regionalName:"Mangai Sliced", category:"dried-fruit", blurb:"Sweet, chewy dried mango strips — no added sugar.", images:[{hue:"#F0A41C",tint:"#FBE7BB"},{hue:"#E08E0F",tint:"#F8DFAC"},{hue:"#F7B53A",tint:"#FCEBC5"}], grams:[{label:"100g",price:130},{label:"250g",price:310},{label:"500g",price:600}], defaultGram:1, tags:["No sugar","Alphonso","Chewy"], origin:"Ratnagiri, MH", outOfStock:true },
+      { id:"dried-pineapple", name:"Dried Pineapple", regionalName:"Pineapple Ring", category:"dried-fruit", blurb:"Sweet-tart pineapple rings — tropical sunshine.", images:[{hue:"#E8C12C",tint:"#FAECAE"},{hue:"#D6AB1C",tint:"#F6E39C"},{hue:"#F0CD42",tint:"#FBF0BA"}], grams:[{label:"100g",price:145},{label:"250g",price:350},{label:"500g",price:680}], defaultGram:1, tags:["Rings","Tropical","Sweet-tart"], origin:"Thailand", outOfStock:true },
+      { id:"dried-papaya", name:"Dried Papaya", regionalName:"Papaya Slices", category:"dried-fruit", blurb:"Soft, vibrant dried papaya strips — tropical and sweet.", images:[{hue:"#E8741C",tint:"#FAD9B5"},{hue:"#D26010",tint:"#F7CFA1"},{hue:"#F0862C",tint:"#FBDDBA"}], grams:[{label:"100g",price:110},{label:"250g",price:270},{label:"500g",price:530}], defaultGram:1, tags:["Strips","Soft","Sweet"], origin:"Sri Lanka", outOfStock:true },
+      { id:"dried-kiwi", name:"Dried Kiwi", regionalName:"Kiwi Slices", category:"dried-fruit", blurb:"Tangy green dried kiwi slices — vitamin C powerhouse.", images:[{hue:"#7BAE3C",tint:"#E5EFC9"},{hue:"#6B9628",tint:"#DDE7B7"},{hue:"#8FC04E",tint:"#EBF2D2"}], grams:[{label:"100g",price:165},{label:"250g",price:395},{label:"500g",price:770}], defaultGram:1, tags:["Slices","Tangy","Green"], origin:"New Zealand", outOfStock:true },
+      { id:"pumpkin-seed", name:"Pumpkin Seeds", regionalName:"Seemai Kaddal", category:"seed", blurb:"Shelled pumpkin seeds — green, crunchy and protein-rich.", images:[{hue:"#5A7A2E",tint:"#E8EFD5"},{hue:"#4A6B26",tint:"#DDE8C6"},{hue:"#6B8C3F",tint:"#EEF3DC"}], grams:[{label:"100g",price:90},{label:"250g",price:215},{label:"500g",price:420},{label:"1Kg",price:820}], defaultGram:1, tags:["Shelled","Protein-rich","Magnesium"], origin:"India", outOfStock:true },
+      { id:"sunflower-seed", name:"Sunflower Seeds", regionalName:"Sooriyakkaani Vithanam", category:"seed", blurb:"Hulled sunflower seeds — nutty, mild and heart-friendly.", images:[{hue:"#8A8478",tint:"#EEEDE7"},{hue:"#6E6A60",tint:"#E4E2DA"},{hue:"#A39B8C",tint:"#F3F1EA"}], grams:[{label:"100g",price:60},{label:"250g",price:145},{label:"500g",price:285},{label:"1Kg",price:550}], defaultGram:1, tags:["Hulled","Heart-friendly","Vitamin E"], origin:"India", outOfStock:true },
+      { id:"flax-seed", name:"Flax Seeds", regionalName:"Ali Vithai", category:"seed", blurb:"Golden flax seeds — omega-3 rich superfood for daily wellness.", images:[{hue:"#8B5A2B",tint:"#F0E2CC"},{hue:"#7A4D22",tint:"#EBD9BE"},{hue:"#A06D38",tint:"#F3E6D2"}], grams:[{label:"100g",price:50},{label:"250g",price:120},{label:"500g",price:235},{label:"1Kg",price:450}], defaultGram:1, tags:["Omega-3","Fibre-rich","Golden"], origin:"India", outOfStock:true },
+      { id:"chia-seed", name:"Chia Seeds", regionalName:"Chia Vithai", category:"seed", blurb:"Tiny black chia seeds — complete protein and antioxidant powerhouse.", images:[{hue:"#3A3A3A",tint:"#E8E8E8"},{hue:"#2C2C2C",tint:"#DDDDDD"},{hue:"#4A4A4A",tint:"#EFEFEF"}], grams:[{label:"100g",price:110},{label:"250g",price:265},{label:"500g",price:515},{label:"1Kg",price:1000}], defaultGram:1, tags:["Antioxidant","Protein","Superfood"], origin:"South America", outOfStock:true },
     ];
 
     const ALL_PRODUCTS = [...FEATURED, ...OTHERS, COMBO];
@@ -1945,6 +2004,30 @@
     }
 
     /* ====================== SHARE ====================== */
+    // Share the whole website (used by the floating share icon)
+    function shareWebsite() {
+      const shareText = "Check out Blora Foods — premium dry fruits & nuts, delivered fresh to your door!";
+      const shareUrl = window.location.href.split("#")[0];
+      if (navigator.share) {
+        navigator.share({
+          title: "Blora Foods — Premium Dry Fruits & Nuts",
+          text: shareText,
+          url: shareUrl
+        }).catch(function() { /* user cancelled */ });
+        return;
+      }
+      const waShare = "https://wa.me/?text=" + encodeURIComponent(shareText + " " + shareUrl);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(shareUrl).then(function() {
+          showShareToast("Website link copied!");
+        }).catch(function() {
+          showShareToast("Open WhatsApp to share", waShare);
+        });
+      } else {
+        window.open(waShare, "_blank", "noopener,noreferrer");
+      }
+    }
+
     function shareProduct(p) {
       const shareText = "Check out " + p.name + " at Blora Foods — premium dry fruits & nuts!";
       const shareUrl = window.location.href.split("#")[0] + "#/all-nuts";
@@ -2026,9 +2109,6 @@
       wrap.innerHTML = `
         <div class="product-image-wrap">
           ${badge}
-          <button class="share-btn" data-action="share" aria-label="Share ${p.name}">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-          </button>
           ${isOos ? `<div class="oos-overlay"><span class="oos-label">Out of Stock</span></div>` : ""}
           <img src="${images[0]}" alt="${p.name}" />
         </div>
@@ -2065,14 +2145,6 @@
           </div>
         </div>
       `;
-
-      // Wire up share button (Web Share API with copy-link fallback)
-      const shareBtn = wrap.querySelector(".share-btn");
-      shareBtn.addEventListener("click", function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        shareProduct(p);
-      });
 
       // Wire up gram selection
       const gramBtns = wrap.querySelectorAll(".gram-btn");
@@ -2299,17 +2371,25 @@
         return matchesFilter && matchesQuery;
       });
 
+      // Sort: in-stock products first, out-of-stock pushed to bottom
+      const sorted = filtered.slice().sort(function(a, b) {
+        const aOos = !!a.outOfStock;
+        const bOos = !!b.outOfStock;
+        if (aOos === bOos) return 0;
+        return aOos ? 1 : -1;
+      });
+
       const emptyState = document.getElementById("empty-state");
       const resultsCount = document.getElementById("results-count");
 
-      if (filtered.length === 0) {
+      if (sorted.length === 0) {
         emptyState.classList.remove("hidden");
         resultsCount.innerHTML = "";
         return;
       }
       emptyState.classList.add("hidden");
-      resultsCount.innerHTML = `Showing <strong>${filtered.length}</strong> ${filtered.length === 1 ? "product" : "products"}`;
-      filtered.forEach(p => grid.appendChild(renderProductCard(p)));
+      resultsCount.innerHTML = `Showing <strong>${sorted.length}</strong> ${sorted.length === 1 ? "product" : "products"}`;
+      sorted.forEach(p => grid.appendChild(renderProductCard(p)));
     }
 
     function resetFilters() {
@@ -2561,6 +2641,31 @@
       renderHeroVisual();
       renderComboVisual();
       renderAboutVisual();
+
+      // ---- Prevent right-click & image drag/download ----
+      // Disable the context menu globally (blocks "Save image as...")
+      document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+        return false;
+      });
+      // Block drag-start on all images (also blocks drag-to-desktop download)
+      document.addEventListener("dragstart", function(e) {
+        if (e.target && e.target.tagName === "IMG") {
+          e.preventDefault();
+          return false;
+        }
+      });
+      // Make all images non-selectable / non-draggable
+      document.addEventListener("mousedown", function(e) {
+        if (e.target && e.target.tagName === "IMG" && e.button === 0) {
+          // Allow click but prevent text-selection drag of the image
+          e.preventDefault();
+        }
+      });
+      // Apply pointer-events:none + user-select:none to all <img> after render
+      const imgStyle = document.createElement("style");
+      imgStyle.innerHTML = "img { -webkit-user-drag: none; user-select: none; -webkit-user-select: none; }";
+      document.head.appendChild(imgStyle);
 
       // Featured products on home
       const featuredGrid = document.getElementById("featured-grid");
